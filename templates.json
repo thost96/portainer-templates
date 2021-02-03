@@ -1,0 +1,131 @@
+[
+  {
+    "type":3,
+    "title":"Pihole",
+    "description":"",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "dns",
+      "tools",
+      "smarthome"
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "stacks/pihole.yml"}
+  },
+  {
+    "type":3,
+    "title":"Jitsi Meet",
+    "description":"",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "office",
+      "production"
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "stacks/jitsi.yml"}
+  },
+  {
+    "type":3,
+    "title":"poste.io mail",
+    "description":"",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "production"
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "stacks/poste.yml"}
+  },
+  {
+    "type":3,
+    "title":"poste.io mail",
+    "description":"",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "production"
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "stacks/jitsi.yml"}
+  },
+  {
+    "type":3,
+    "title":"nginx-proxy",
+    "description":"",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "production",
+      "dns",
+      "proxy"
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "proxy/nginx-proxy.yml"}
+  },
+  {
+    "type":3,
+    "title":"nextcloud",
+    "description":"nextcloud for nginx-proxy",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "production",
+      "proxy"
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "proxy/nextcloud.yml"}
+  },
+  {
+    "type":3,
+    "title":"wordpress",
+    "description":"wordpress for nginx-proxy",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "production",
+      "proxy"
+    ],
+    "env": [
+      {
+        "name": "HOSTNAME",
+        "label": "Hostname for nginx-proxy and letsencrypt"
+      },
+      {
+        "name": "ROOT_PASSWORD",
+        "label": "Root Password of the MariaDB"
+      },
+      {
+        "name": "PASSWORD",
+        "label": "Password of Wordpress User on DB"
+      }
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "proxy/wordpress.yml"}
+  },
+  {
+    "type":3,
+    "title":"bitwarden",
+    "description":"bitwarden for nginx-proxy",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "production",
+      "proxy",
+      "tools"
+    ],
+    "env": [
+      {
+        "name": "HOSTNAME",
+        "label": "Hostname for nginx-proxy and letsencrypt"
+      }
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "proxy/bitwarden.yml"}
+  },
+  {
+    "type":3,
+    "title":"nginx",
+    "description":"simple nginx for nginx-proxy",
+    "logo":"",
+    "platform":"linux",
+    "categories": [
+      "production",
+      "proxy"
+    ],
+    "repository": {"url": "https://github.com/thost96/portainer-templates","stackfile": "proxy/nginx.yml"}
+  }
+]

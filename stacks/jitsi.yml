@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+
+  wordpress:
+    image: wordpress:latest
+    environment: 
+      - VIRTUAL_HOST=${HOSTNAME}
+      - LETSENCRYPT_HOST=${HOSTNAME}
+    volumes: 
+      - wordpress:/var/www/html
+    networks:
+      - nginx-proxy
+      - wordpress-backend
+
+  wordpress-db:
+    image: mariadb:10.4.13
+    volumes: 
+      - wordpress-db:/var/lib/mysql
+    environment: 
+      - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=${PASSWORD}
+    networks:
+      - wordpress-backend
+
+
+volumes:
+  wordpress:
+  wordpress-db:
+
+
+networks:
+  nginx-proxy:
+    external: true
+  wordpress-backend:

@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  pihole:
+    image: pihole/pihole:latest
+    hostname: pihole
+    restart: unless-stopped
+    environment:
+      - TZ='Europe/Berlin'
+    volumes:
+      - 'pihole-data:/etc/pihole/'
+      - 'pihole-dnsmasq:/etc/dnsmasq.d/'
+    networks:
+      - macvlan
+    dns:
+      - 127.0.0.1
+      - 1.1.1.1
+    cap_add:
+      - NET_ADMIN
+
+
+volumes: 
+  pihole-data:
+  pihole-dnsmasq:

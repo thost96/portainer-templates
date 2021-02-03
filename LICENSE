@@ -1,17 +1,3 @@
-# portainer-templates
-Templates for Portainer 
-
-## Usage
-If you want to use my templates just activate "Use external templates" in your Portainer Webinterface under "Settings" > "App Templates" 
-and set this as "URL":<br>https://raw.githubusercontent.com/thost96/portainer-templates/main/templates.json
-
-## Changelog
-
-### 0.0.1 (03.02.2021)
-* (thost96) - initial release
-
-## License
-
 MIT License
 
 Copyright (c) 2021 Thorsten Reichelt
